@@ -21,7 +21,7 @@ To install from behind a proxy server:
     $ export https_proxy=http://your.proxyserver.org:8080
     $ export http_proxy=http://your.proxyserver.org:8080
     $ cd /path/to/statsd
-    $ npm install git+https://github.com/markkimsal/statsd-elasticsearch-backend.git
+    $ npm install git+https://github.com/ethanjcohen/statsd-elasticsearch-backend.git
 
 
 ## Configuration
@@ -45,7 +45,8 @@ Add a structure to your configuration called "elasticsearch"
 	 timerType:     "timer",
 	 timerDataType: "timer_data",
 	 gaugeDataType: "gauge",
-     formatter:     "default_format"
+     formatter:     "default_format",
+     partNames:     ["ns", "grp", "tgt"]
  }
 ```
 
